@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2 (Python 3.10.12 on linux)" generated="2025-01-18T15:36:07.324738" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2 (Python 3.10.12 on linux)" generated="2025-01-18T16:23:33.026560" rpa="false" schemaversion="5">
 <suite id="s1" name="Yodapp-Robot" source="/home/mario/QAx/projects/yodapp-robot">
 <suite id="s1-s1" name="Tests" source="/home/mario/QAx/projects/yodapp-robot/tests">
 <suite id="s1-s1-s1" name="Click" source="/home/mario/QAx/projects/yodapp-robot/tests/click.robot">
@@ -19,36 +19,77 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" start="2025-01-18T15:36:07.395068" elapsed="5.205315"/>
+<status status="PASS" start="2025-01-18T16:23:33.095493" elapsed="4.128544"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="AppiumLibrary">
 <arg>${START}</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" start="2025-01-18T15:36:12.600692" elapsed="5.425346"/>
+<status status="PASS" start="2025-01-18T16:23:37.224338" elapsed="5.356870"/>
 </kw>
 <kw name="Click Text" owner="AppiumLibrary">
-<msg time="2025-01-18T15:36:18.211195" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
+<msg time="2025-01-18T16:23:42.742622" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
 <arg>${START}</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" start="2025-01-18T15:36:18.026312" elapsed="0.185136"/>
+<status status="PASS" start="2025-01-18T16:23:42.581479" elapsed="0.161389"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-18T16:23:42.743753" level="INFO">${hamburguer} = //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<var>${hamburguer}</var>
+<arg>//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-18T16:23:42.743377" elapsed="0.000478"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-18T16:23:44.009654" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]
+xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${hamburguer}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-18T16:23:42.744201" elapsed="1.265680"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-18T16:23:44.011240" level="INFO">Clicking element '//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<msg time="2025-01-18T16:23:44.091413" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${hamburguer}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-18T16:23:44.010331" elapsed="0.081291"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-18T16:23:44.092399" level="INFO">${menu_item} = //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</msg>
+<var>${menu_item}</var>
+<arg>//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-18T16:23:44.092064" elapsed="0.000443"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-18T16:23:45.036529" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</msg>
+<arg>${menu_item}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-18T16:23:44.092811" elapsed="0.943938"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-18T16:23:45.038304" level="INFO">Clicking element '//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]'.</msg>
+<msg time="2025-01-18T16:23:45.126506" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</msg>
+<arg>${menu_item}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-18T16:23:45.037095" elapsed="0.089865"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-01-18T15:36:23.212610" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-01-18T16:23:50.128504" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-01-18T15:36:18.212058" elapsed="5.001329"/>
+<status status="PASS" start="2025-01-18T16:23:45.127976" elapsed="5.000826"/>
 </kw>
 <kw name="Close Application" owner="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="PASS" start="2025-01-18T15:36:23.214684" elapsed="0.165538"/>
+<status status="PASS" start="2025-01-18T16:23:50.129188" elapsed="0.177973"/>
 </kw>
-<status status="PASS" start="2025-01-18T15:36:07.393649" elapsed="15.986962"/>
+<status status="PASS" start="2025-01-18T16:23:33.094269" elapsed="17.213261"/>
 </test>
-<status status="PASS" start="2025-01-18T15:36:07.340258" elapsed="16.041268"/>
+<status status="PASS" start="2025-01-18T16:23:33.041379" elapsed="17.267087"/>
 </suite>
-<status status="PASS" start="2025-01-18T15:36:07.339198" elapsed="16.043555"/>
+<status status="PASS" start="2025-01-18T16:23:33.040373" elapsed="17.268989"/>
 </suite>
-<status status="PASS" start="2025-01-18T15:36:07.326663" elapsed="16.057515"/>
+<status status="PASS" start="2025-01-18T16:23:33.029256" elapsed="17.280633"/>
 </suite>
 <statistics>
 <total>
