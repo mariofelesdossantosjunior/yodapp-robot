@@ -21,12 +21,12 @@ Deve realizar um click simples
 *** Keywords ***
 Start Session
     Open Application    http://localhost:4723    
-    ...    platformName=Android
-    ...    deviceName=emulator-5554
-    ...    automationName=UiAutomator2
-    ...    app=app/yodapp-beta.apk
-    ...    udid=emulator-5554
-    ...    autoGrantPermissions=true
+    ...                 platformName=Android
+    ...                 deviceName=emulator-5554
+    ...                 automationName=UiAutomator2
+    ...                 app=app/yodapp-beta.apk
+    ...                 udid=emulator-5554
+    ...                 autoGrantPermissions=true
     
 Get started
     Wait Until Page Contains       ${START}
