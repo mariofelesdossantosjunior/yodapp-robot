@@ -10,10 +10,9 @@ ${START}    QAX
 Start Session
     Open Application    http://localhost:4723    
     ...                 platformName=Android
-    ...                 deviceName=emulator-5554
+    ...                 deviceName=127.0.0.1:6555
     ...                 automationName=UiAutomator2
     ...                 app=app/yodapp-beta.apk
-    ...                 udid=emulator-5554
     ...                 autoGrantPermissions=true
     
 Get started

@@ -5,6 +5,7 @@ Resource   ../resources/base.resource
 *** Test Cases ***
 
 Deve marcar as techs que usam Appium
+
     Start Session
     Get started
     Navigate to     Check e Radio
