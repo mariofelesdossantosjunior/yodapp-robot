@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.10.12 on linux)" generated="2025-01-19T16:37:07.724969" rpa="false" schemaversion="5">
+<suite id="s1" name="Yodapp-Robot" source="/home/mario/QAx/projects/yodapp-robot">
+<suite id="s1-s1" name="Tests" source="/home/mario/QAx/projects/yodapp-robot/tests">
+<suite id="s1-s1-s1" name="Spinner" source="/home/mario/QAx/projects/yodapp-robot/tests/spinner.robot">
+<test id="s1-s1-s1-t1" name="Deve escolher o nivel Jedi" line="7">
+<kw name="Start Session" owner="base">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=127.0.0.1:6555</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>app=app/yodapp-beta.apk</arg>
+<arg>autoGrantPermissions=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-01-19T16:37:07.804756" elapsed="3.320778"/>
+</kw>
+<status status="PASS" start="2025-01-19T16:37:07.804268" elapsed="3.321463"/>
+</kw>
+<kw name="Get started" owner="base">
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${START}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-01-19T16:37:11.126289" elapsed="4.367494"/>
+</kw>
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2025-01-19T16:37:17.226303" level="INFO">xpath criteria: //*[contains(@text,"QAX")]</msg>
+<arg>${START}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2025-01-19T16:37:15.494004" elapsed="1.732639"/>
+</kw>
+<status status="PASS" start="2025-01-19T16:37:11.125952" elapsed="6.100944"/>
+</kw>
+<kw name="Navigate to" owner="base">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-19T16:37:17.228413" level="INFO">${hamburguer} = //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<var>${hamburguer}</var>
+<arg>//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-19T16:37:17.227875" elapsed="0.000667"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-19T16:37:17.264892" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${hamburguer}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-19T16:37:17.228719" elapsed="0.036398"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-19T16:37:17.266681" level="INFO">Clicking element '//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<msg time="2025-01-19T16:37:17.333480" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${hamburguer}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-19T16:37:17.265367" elapsed="0.068507"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-19T16:37:17.334587" level="INFO">${menu_item} = //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Formulários"]</msg>
+<var>${menu_item}</var>
+<arg>//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="${item_text}"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-19T16:37:17.334154" elapsed="0.000532"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-01-19T16:37:18.248865" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Formulários"]</msg>
+<arg>${menu_item}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-19T16:37:17.334826" elapsed="0.914558"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-19T16:37:18.251917" level="INFO">Clicking element '//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Formulários"]'.</msg>
+<msg time="2025-01-19T16:37:19.242658" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Formulários"]</msg>
+<arg>${menu_item}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-19T16:37:18.249899" elapsed="0.993187"/>
+</kw>
+<arg>Formulários</arg>
+<status status="PASS" start="2025-01-19T16:37:17.227350" elapsed="2.016118"/>
+</kw>
+<kw name="Go to item" owner="base">
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${item}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-01-19T16:37:19.245438" elapsed="0.033003"/>
+</kw>
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2025-01-19T16:37:19.352912" level="INFO">xpath criteria: //*[contains(@text,"Cadastro")]</msg>
+<arg>${item}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2025-01-19T16:37:19.278714" elapsed="0.074823"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>${checkpoint}</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2025-01-19T16:37:19.354183" elapsed="1.141279"/>
+</kw>
+<arg>Cadastro</arg>
+<arg>Crie sua conta.</arg>
+<status status="PASS" start="2025-01-19T16:37:19.244007" elapsed="1.251651"/>
+</kw>
+<kw name="Select Level">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-01-19T16:37:20.497090" level="INFO">Clicking element 'id=com.qaxperience.yodapp:id/spinnerJob'.</msg>
+<msg time="2025-01-19T16:37:20.566805" level="INFO">criteria is com.qaxperience.yodapp:id/spinnerJob</msg>
+<arg>id=com.qaxperience.yodapp:id/spinnerJob</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-01-19T16:37:20.496289" elapsed="0.071183"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<arg>class=android.widget.ListView</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-01-19T16:37:20.568071" elapsed="0.857891"/>
+</kw>
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2025-01-19T16:37:22.107990" level="INFO">xpath criteria: //*[contains(@text,"Jedi")]</msg>
+<arg>${level}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2025-01-19T16:37:21.426293" elapsed="0.682012"/>
+</kw>
+<arg>Jedi</arg>
+<status status="PASS" start="2025-01-19T16:37:20.495904" elapsed="1.612662"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-19T16:37:25.109335" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-19T16:37:22.108853" elapsed="3.001057"/>
+</kw>
+<kw name="Close Session" owner="base">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-01-19T16:37:25.111328" elapsed="0.089127"/>
+</kw>
+<status status="PASS" start="2025-01-19T16:37:25.110633" elapsed="0.090041"/>
+</kw>
+<status status="PASS" start="2025-01-19T16:37:07.803281" elapsed="17.397652"/>
+</test>
+<status status="PASS" start="2025-01-19T16:37:07.742804" elapsed="17.459313"/>
+</suite>
+<status status="PASS" start="2025-01-19T16:37:07.741252" elapsed="17.462145"/>
+</suite>
+<status status="PASS" start="2025-01-19T16:37:07.727731" elapsed="17.476568"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Yodapp-Robot" id="s1" pass="1" fail="0" skip="0">Yodapp-Robot</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">Yodapp-Robot.Tests</stat>
+<stat name="Spinner" id="s1-s1-s1" pass="1" fail="0" skip="0">Yodapp-Robot.Tests.Spinner</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
